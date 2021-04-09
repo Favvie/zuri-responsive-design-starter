@@ -460,8 +460,8 @@ div.footer h6 {
     div.hero-section {
         width: 100%;
         padding: 8em 2em;
-        padding-bottom: 0;
-        height: 100vh;
+        padding-bottom: 10em;
+        /* height: 100vh; */
        
     }
 
@@ -472,6 +472,8 @@ div.footer h6 {
     div.hero-content-heading p {
         font-size: .8em;
         line-height: 2em;
+        display: block;
+        margin-top: 2em;
     }
 
     div.hero-content-btn {
