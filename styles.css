@@ -7,6 +7,12 @@
     font-family: 'Rubik', sans-serif;
 }
 
+body{
+    width: 100%;
+}
+.menu, .exit-icon {
+    display: none;
+}
 div.nav-bar {
     display: flex;
     justify-content: space-between;
@@ -320,6 +326,8 @@ textarea {
     border: 1px solid #bcc3c7;
     background: transparent;
     color: #f0f0f0;
+    border-radius: 2px;
+    font-size: 1rem;
 }
 
 div.footer-btn {
@@ -344,4 +352,261 @@ div.footer h6 {
     color: #88949B;
     font-size: 1rem;
     padding-top: 6rem;
+}
+
+@media only screen and (max-width:756px) {
+    body {
+        width: 100%;
+    }
+
+
+    ul li {
+        margin: 0;
+        padding: 0;
+    }
+    div.nav-bar {
+        width: 100%;
+        padding: 1em 1.5em;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        cursor: pointer;
+    }
+
+    nav.menu-btn {
+        display: block;
+        /* this would have added box shadow to the mobile navigation */
+        /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); */
+    }
+
+    nav.menu-btn .nav--overlay {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .nav--links {
+        position: fixed;
+        z-index: 2;
+        width: 60%;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        margin: 0;
+        background: #3d74a4;
+        
+    }
+
+    /* this adds the overlay */
+    .nav--overlay {
+        position: fixed;
+        /* this z-index put the overlay behind the nav-links 
+        but above the rest */
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #20272e50;
+        backdrop-filter: blur(2px);
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    div.logo {
+        font-size: 1.2em;
+    }
+
+     nav ul.nav-links {
+        display: block; 
+        margin-top: 3em; 
+    }
+
+    ul li a {
+        text-decoration: none;
+        color: whitesmoke;
+        padding-top: 1em;
+        padding-right: 1.5em;
+        padding-bottom: 1em;
+        display: block;
+        text-align: right;
+        font-size: 1.1em;
+        
+    }
+    
+    ul li a:hover {
+        color: white;
+        background: transparent;
+        font-weight: bold;
+        background-color: #0e3252;
+        padding-right: 1.5em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+    
+    .exit-icon {
+        display: block;
+        width: 15px;
+        float: right;
+        margin-right: 2em;
+        margin-top: 1.3em;
+        cursor: pointer;
+    }
+
+    div.hero-section {
+        width: 100%;
+        padding: 8em 2em;
+        padding-bottom: 0;
+        height: 100vh;
+       
+    }
+
+    div.hero-content-heading h3 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    div.hero-content-heading p {
+        font-size: .8em;
+        line-height: 2em;
+    }
+
+    div.hero-content-btn {
+        padding-top: 5rem;
+    }
+
+    div.hero-background-pos {
+        display: none;
+    }
+    
+    div.background {
+        width: 35rem;
+        height: 22rem;
+        padding-left: 1.5em;
+    }
+
+    div.snapshot-box-content {
+        flex-direction: column; 
+    }
+
+    div.box1,  div.box3 {
+        margin: 20px;
+    }
+
+    div.gallery-content p {
+        font-size: .9rem;
+        line-height: 1.5em;
+    }
+
+    div.img {
+        margin: 15px;
+    }
+    
+    div.footer-content p {
+        font-size: .9rem;
+        line-height: 1.5em;
+    }
+
+    input[type="text"], input[type="email"] {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom:1em; 
+    }
+
+    div.footer-input {
+        display: flex;
+        flex-direction: column;
+    }
+
+    textarea {
+        margin: 0;
+        width: 100%;
+        padding: 10px 20px;
+        
+    }
+
+    div.footer-textarea {
+        margin: 0;
+        padding: 0;
+        justify-content: start;
+        
+    }
+
+    div.footer h6 {
+        font-size: .8rem;
+    }
+    
+}
+
+@media only screen and (min-width: 756px) and (max-width:850px) {
+    div.hero-content-heading h3 {
+        font-size: 1.5em;
+    }
+
+    div.hero-section {
+        padding: 8em 5em;
+        padding-bottom: 10em;
+    }
+
+    div.background p {
+        padding-left: 1rem;
+    }
+
+    div.hero-background-pos {
+        display: none;
+    }
+    
+}
+
+@media only screen and (min-width: 850px) and (max-width:1300px) {
+    div.hero-background-pos {
+        left: 73%;
+    }
+}
+
+
+ @media only screen and (min-width: 1600px) {
+    div.hero-background-pos {
+        left: 58%;
+    }
+}
+
+@media only screen and (min-width: 1700px) {
+    div.hero-background-pos {
+        left: 65%;
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    div.hero-background-pos {
+        left: 64%;
+    }
+}
+
+@media only screen and (min-width: 1900px) {
+    div.hero-background-pos {
+        left: 63%;
+    }
+}
+
+@media only screen and (min-width: 2000px) {
+    div.hero-background-pos {
+        left: 62%;
+    }
+}
+
+@media only screen and (min-width: 2100px) {
+    div.hero-background-pos {
+        left: 61%;
+    }
+}
+
+
+@media only screen and (min-width: 2500px) {
+    div.hero-background-pos {
+        left: 59.5%;
+    }
 }
